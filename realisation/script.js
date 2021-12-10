@@ -1,3 +1,8 @@
+document.getElementById("showFormBtn").addEventListener("click", function() {
+    var formCard = document.getElementById('formCard')
+    formCard.classList.toggle("d-none")
+})
+
 var selectedRow = null
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
