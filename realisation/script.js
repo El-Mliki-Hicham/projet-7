@@ -49,7 +49,7 @@ function insertNewRow(work) {
         
     newRow.insertCell(3).innerHTML= work.date;
     
-    newRow.insertCell(4).innerHTML= work.language
+    newRow.insertCell(4).innerHTML= work.language;
    
     cell6 = newRow.insertCell(5);
     cell6.innerHTML = work.type;
