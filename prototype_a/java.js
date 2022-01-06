@@ -1,5 +1,5 @@
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
-    event.preventDefault();
+ event.preventDefault();
     var ovrage = readOvrage();
     insertNewRow(ovrage);
 })
