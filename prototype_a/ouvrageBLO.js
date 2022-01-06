@@ -29,4 +29,18 @@ class OuvrageBLO {
           }
       }
   }
+
+
+
+deletOuvrage(ouvrage) {
+    for (var i = 0; i < this.#ouvrageList.length; i++) {
+        if (ouvrage.id == this.#ouvrageList[i].id) {
+            this.#ouvrageList[i] = ouvrage
+            return ouvrage
+        }
+    }
+}
+
+
+
 }

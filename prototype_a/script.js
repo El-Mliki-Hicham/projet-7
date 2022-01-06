@@ -59,16 +59,19 @@ function insertNewRow(ouvrage) {
 
 
 
-// function onEdit(buttonReference) {
-//     selectedRow = buttonReference.parentElement.parentElement;
-//     var rowId = selectedRow.cells[0].innerHTML
-//     var work = new Work();
-//     work = workBLO.getItem(rowId)
-//     document.getElementById("inputTitle").value = work.title;
+function onEdit(buttonReference) {
+    selectRow = buttonReference.parentElement.parentElement;
+    var rowId = selectRow.cells[0].innerHTML
+    var ouvrage = new Ouvrage();
+    ouvrage = ouvrageBLO.getItem(rowId)
+    document.getElementById("inputTitle").value = ouvrage.titre;
 
-// }
+}
 
-// function editRow(workToEdit) {
-//     workBLO.editWork(workToEdit)
-//     selectedRow.cells[1].innerHTML = workToEdit.title;
-// }
+function editRow(ouvrageToEdit) {
+    ouvrageBLO.editOuvrage(ouvrageToEdit)
+    selectRow.cells[1].innerHTML = ouvrageToEdit.titre;
+}
+
+
+
