@@ -41,6 +41,6 @@ deletOuvrage(ouvrage) {
     }
 }
 
-
+    
 
 }
