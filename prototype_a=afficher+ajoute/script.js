@@ -29,6 +29,9 @@ function readOuvrage() {
 
 
 
+
+
+
 function insertNewRow() {
     var List = ouvrageManager.ouvrageList
     var tableBody = document.getElementById("ouvrageTable").getElementsByTagName('tbody')[0];
