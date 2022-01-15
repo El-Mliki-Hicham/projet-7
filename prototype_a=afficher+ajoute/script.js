@@ -6,6 +6,8 @@ var ouvrageId = null;
 document.getElementById("formSubmit").addEventListener("submit", function (event) {
     event.preventDefault();
     var ouvrage = readOuvrage();
+  
+
     ouvrageManager.addOuvrage(ouvrage);
 
     insertNewRow();
@@ -16,7 +18,7 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
 
 function resetForm() {
     document.getElementById("inputTitle").value = "";
-    selectRow = null;
+  
 }
 
 
@@ -26,6 +28,8 @@ function readOuvrage() {
     ouvrage.titre = document.getElementById("inputTitle").value;
     return ouvrage;
 }
+
+
 
 
 
@@ -45,6 +49,6 @@ function insertNewRow() {
         cell1.innerHTML = List[i].id;
         cell2 = newRow.insertCell(1);
         cell2.innerHTML = List[i].titre;
+       
     }
-
 }
