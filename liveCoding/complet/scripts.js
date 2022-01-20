@@ -1,5 +1,5 @@
 var gestionOuvrage = new GestionOuvrage();
-
+var rowId
 var selectRow = null;
 
 // document.getElementById("showFormBtn").addEventListener("click", function() {
@@ -13,11 +13,11 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     if (selectRow == null) {
         gestionOuvrage.addOuvrage(ouvrage);
     }
-    // else
-    // if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
-    //     ouvrage.id = rowId;
-    //     gestionOuvrage.modifierOuvrage(ouvrage)
-    // }
+    else
+    if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
+        ouvrage.id = rowId;
+        gestionOuvrage.modifierOuvrage(ouvrage)
+    }
 
     insertNewRow();
 
@@ -81,45 +81,45 @@ function insertNewRow() {
     // cell7 = newRow.insertCell(6);
     // cell7.innerHTML = List[i].type;
 
-    // cell8 = newRow.insertCell(7);
+    cell8 = newRow.insertCell(4);
+      
 
-
-//     var modifierButton = document.createElement("button")
+    var modifierButton = document.createElement("button")
 //     var suprimerButton = document.createElement("button")
 
-//     var modifierContent = document.createTextNode("modifier")
-//     modifierButton.appendChild(modifierContent)
-//     modifierButton.setAttribute('onclick', 'modifier(this)')
+    var modifierContent = document.createTextNode("modifier")
+    modifierButton.appendChild(modifierContent)
+    modifierButton.setAttribute('onclick', 'modifier(this)')
 
 //     var suprimerContent = document.createTextNode('suprimer')
 //     suprimerButton.appendChild(suprimerContent)
 //     suprimerButton.setAttribute("onclick", 'suprimer(this)')
  
-//    cell8.appendChild(modifierButton)  
+cell8.appendChild(modifierButton)
 //    cell8.appendChild(suprimerButton)  
   }
   
 }
 
-// function modifier(buttonReference) {
-//     selectRow = buttonReference.parentElement.parentElement;
-//     rowId = selectRow.cells[0].innerHTML
-//     var ouvrage = new Ouvrage();
-//     ouvrage = gestionOuvrage.getItem(rowId)
-//     document.getElementById("inputTitle").value = ouvrage.titre;
-//     document.getElementById("inputAuthor").value = ouvrage.auteur;
-//     document.getElementById("inputPrix").value = ouvrage.prix;
-//     document.getElementById("inputDate").value = ouvrage.date;
-//     document.getElementById("inputLanguage").value = ouvrage.langue;
+function modifier(buttonReference) {
+    selectRow = buttonReference.parentElement.parentElement;
+    rowId = selectRow.cells[0].innerHTML
+    var ouvrage = new Ouvrage();
+    ouvrage = gestionOuvrage.getItem(rowId)
+    document.getElementById("inputTitle").value = ouvrage.titre;
+    document.getElementById("inputAuthor").value = ouvrage.auteur;
+    document.getElementById("inputPrix").value = ouvrage.prix;
+    document.getElementById("inputDate").value = ouvrage.date;
+    document.getElementById("inputLanguage").value = ouvrage.langue;
 
-//     var checkValue = document.getElementsByName("workType");
-//     for (var i = 0; i < checkValue.length; i++) {
-//         if (checkValue[i].value == ouvrage.type) {
-//             checkValue[i].checked = true
-//         }
-//     }
+    // var checkValue = document.getElementsByName("workType");
+    // for (var i = 0; i < checkValue.length; i++) {
+    //     if (checkValue[i].value == ouvrage.type) {
+    //         checkValue[i].checked = true
+    //     }
+    // }
 
-// }
+}
 // function suprimer(buttonReference) {
 //     if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
 //         var row = buttonReference.parentElement.parentElement;

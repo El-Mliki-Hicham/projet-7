@@ -13,22 +13,22 @@ class GestionOuvrage{
        this.#ouvrageList.push(ouvrage)
         // this.enregistrer()
    }
-//    modifierOuvrage(ouvrage) {
-//     //  this.ouvrir()
-//     for (var i = 0; i < this.#ouvrageList.length; i++) {
-//         if (ouvrage.id == this.#ouvrageList[i].id) {
-//             this.#ouvrageList[i] = ouvrage
-//              // this.enregistrer()
-//         }
-//     }
-//   }
-//   getItem(id) {
-//     for (var i = 0; i < this.ouvrageList.length; i++) {
-//         if (id == this.ouvrageList[i].id) {
-//             return this.ouvrageList[i]
-//         }
-//     }
-//   }
+   modifierOuvrage(ouvrage) {
+    //  this.ouvrir()
+    for (var i = 0; i < this.#ouvrageList.length; i++) {
+        if (ouvrage.id == this.#ouvrageList[i].id) {
+            this.#ouvrageList[i] = ouvrage
+             // this.enregistrer()
+        }
+    }
+  }
+  getItem(id) {
+    for (var i = 0; i < this.ouvrageList.length; i++) {
+        if (id == this.ouvrageList[i].id) {
+            return this.ouvrageList[i]
+        }
+    }
+  }
 //   suprimerOuvrage() {
 //     this.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
 //         return ouvrage.id != id

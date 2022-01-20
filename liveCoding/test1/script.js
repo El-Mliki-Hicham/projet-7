@@ -34,7 +34,7 @@ for ( i = 0; i < list.length; i++) {
     var newRow = tableBody.insertRow(tableBody.length)
     cell1 =newRow.insertCell(0)
     cell1.innerHTML = list[i].id
-
+    
     cell2= newRow.insertCell(1)
     cell2.innerHTML = list[i].titre 
     
