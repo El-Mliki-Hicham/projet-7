@@ -1,7 +1,7 @@
 var gestionOuvrage = new GestionOuvrage();
 
 var selectRow = null;
-var rowId = null;
+
 // document.getElementById("showFormBtn").addEventListener("click", function() {
 //     var formN = document.getElementById('formN')
 //     formN.classList.toggle("d-none")
@@ -40,8 +40,8 @@ function readOuvrage() {
     var ouvrage = new Ouvrage();
     
     ouvrage.titre = document.getElementById("inputTitle").value;
-    ouvrage["auteur"] = document.getElementById("inputAuthor").value;
-    ouvrage["prix"] = parseFloat(document.getElementById("inputPrix").value);
+    ouvrage.auteur = document.getElementById("inputAuthor").value;
+    ouvrage.prix = parseFloat(document.getElementById("inputPrix").value);
     // ouvrage["date"]= document.getElementById("inputDate").value;
     // ouvrage["langue"] = document.getElementById("inputLanguage").value;
     // ouvrage["type"] = document.querySelector('input[name="workType"]:checked').value
@@ -53,7 +53,7 @@ function readOuvrage() {
 
 function insertNewRow() {
     var List = gestionOuvrage.ouvrageList
-    console.log(List)
+    
     var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
    while(tableBody.rows.length > 0){
        tableBody.deleteRow(0);
