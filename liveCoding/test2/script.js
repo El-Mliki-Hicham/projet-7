@@ -1,6 +1,6 @@
 var gestionVetement = new GestionVetement ()
 var insertRow = null
-
+var rowId
 document.getElementById("formSubmit").addEventListener("submit" ,function (event) {
     event.preventDefault()
   
@@ -10,9 +10,19 @@ if(insertRow == null) {
     gestionVetement.addVetement(vetement)
 
     insertNewRow()
+
+    restForm()
 }
 
 })
+
+function restForm(){
+
+    document.getElementById("VetementInput").value = " "
+    document.getElementById("color").value = " "
+    document.getElementById("prix").value = " "
+    insertRow = null
+}
 
 function readVetement(vetement){
 
@@ -49,5 +59,28 @@ cell3= newRow.insertCell(2)
 cell3.innerHTML=list[i].color
 cell4= newRow.insertCell(3)
 cell4.innerHTML=list[i].prix
+
+cell5=newRow.insertCell(4)
+
+var modifierButton = document.createElement('button')
+var modifierButtonName = document.createTextNode("modifier")
+modifierButton.appendChild(modifierButtonName)
+modifierButton.setAttribute('onclick',"modifier(this)")
+
+cell5.appendChild(modifierButton)
+
+
 }
+}
+
+function modifier(buttonReferance ){
+
+insertRow = buttonReferance.parentElement.parentElement
+rowId = insertRow.cells[0].innerHTML
+var vetement = new Vetement()
+vetement = gestionVetement.getId(rowId)
+document.getElementById('VetementInput').value = vetement.name
+document.getElementById('color').value = vetement.color
+document.getElementById('prix').value = vetement.prix
+
 }

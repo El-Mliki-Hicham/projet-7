@@ -17,5 +17,17 @@ addVetement(vetement){
     
 }
 
+getId(id){
+for (let i = 0; i < this.#_listVetement.length; i++) {
+    if( id == this.#_listVetement[i].id){
+        return this.#_listVetement[i]
+        
+    }
+    
+    
+}
+
+}
+
 
 }

@@ -17,4 +17,12 @@ this.listOuvrage.push(ouvrage)
 
 
 
+ getItem(id){
+for (let i = 0; i <this.listOuvrage.length; i++) {
+  if(id == this.listOuvrage[i].id){
+      return this.listOuvrage[i]
+  }
+    
+}
+}
 }

@@ -5,10 +5,12 @@ document.getElementById("formSubmit").addEventListener("submit" ,function (event
     event.preventDefault()
   
 ouvrage = readOuvrage()
-if(rowNew == null){
+if(rowNew == null){ 
     gestionOuvrage.addOuvrage(ouvrage)
 
     insertNewRow()
+
+    restForm()
 }
 
  
@@ -21,6 +23,17 @@ ouvrage.titre = document.getElementById("inputTitle").value
 ouvrage.prix = document.getElementById("inputAuthor").value
 return ouvrage 
  }
+
+
+
+function restForm(){
+
+document.getElementById("inputTitle").value = " "
+newRow = null
+
+}
+
+
 
 
 function insertNewRow (){
@@ -60,13 +73,17 @@ for ( i = 0; i < list.length; i++) {
 
 function modifier(buttonReferance){
 
-rowNew = buttonReferance.parentElement.parentElement
+    rowNew = buttonReferance.parentElement.parentElement
 
-rowId = gestionOuvrage.getItems(id)
+    rowId = rowNew.cells[0].innerHTML
 
+    var ouvrage = new Ouvrage()
+ouvrage= gestionOuvrage.getItem(rowId)
 
-document.getElementById('inputAuthor').value = ouvrage.prix
-document.getElementsById("inputTitle").value = ouvrage.titre
+document.getElementById("inputTitle").value = ouvrage.titre 
+ 
+document.getElementById("inputPrix").value = ouvrage.prix 
 
 
 }
+
