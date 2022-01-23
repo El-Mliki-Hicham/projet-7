@@ -25,4 +25,23 @@ for (let i = 0; i <this.listOuvrage.length; i++) {
     
 }
 }
+
+
+modifierOuvrage(ouvrage){
+
+for (let i = 0; i  < this.listOuvrage.length; i++) {
+    
+if( ouvrage.id == this.listOuvrage[i].id){
+    this.listOuvrage[i] = ouvrage
+
+}
+    
+}
+
+}
+
+
+
+
+
 }

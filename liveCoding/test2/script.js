@@ -9,10 +9,20 @@ vetement = readVetement()
 if(insertRow == null) {
     gestionVetement.addVetement(vetement)
 
+}
+
+else 
+if(confirm("click oui pour modifier")){
+vetement.id = rowId
+gestionVetement.modifierVetement(vetement)
+
+}
+
+
     insertNewRow()
 
     restForm()
-}
+
 
 })
 

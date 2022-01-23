@@ -7,13 +7,20 @@ document.getElementById("formSubmit").addEventListener("submit" ,function (event
 ouvrage = readOuvrage()
 if(rowNew == null){ 
     gestionOuvrage.addOuvrage(ouvrage)
+}
+else
+if (confirm("modifier?")){
 
+    ouvrage.id  = rowId 
+
+    gestionOuvrage.modifierOuvrage(ouvrage)
+
+
+}
     insertNewRow()
 
     restForm()
-}
 
- 
 })
 
 

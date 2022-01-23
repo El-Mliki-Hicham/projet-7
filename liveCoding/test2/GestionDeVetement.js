@@ -21,7 +21,7 @@ getId(id){
 for (let i = 0; i < this.#_listVetement.length; i++) {
     if( id == this.#_listVetement[i].id){
         return this.#_listVetement[i]
-        
+
     }
     
     
@@ -29,5 +29,14 @@ for (let i = 0; i < this.#_listVetement.length; i++) {
 
 }
 
+
+
+modifierVetement(vetement){
+
+    for (let i  = 0; i  < this.#_listVetement.length; i++) {
+        if( vetement.id == this.#_listVetement[i].id){
+             this.#_listVetement[i] =  vetement
+        } }
+}
 
 }
