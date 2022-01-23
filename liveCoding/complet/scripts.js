@@ -85,18 +85,18 @@ function insertNewRow() {
       
 
     var modifierButton = document.createElement("button")
-//     var suprimerButton = document.createElement("button")
+    var suprimerButton = document.createElement("button")
 
     var modifierContent = document.createTextNode("modifier")
     modifierButton.appendChild(modifierContent)
     modifierButton.setAttribute('onclick', 'modifier(this)')
 
-//     var suprimerContent = document.createTextNode('suprimer')
-//     suprimerButton.appendChild(suprimerContent)
-//     suprimerButton.setAttribute("onclick", 'suprimer(this)')
+    var suprimerContent = document.createTextNode('suprimer')
+    suprimerButton.appendChild(suprimerContent)
+    suprimerButton.setAttribute("onclick", 'suprimer(this)')
  
 cell8.appendChild(modifierButton)
-//    cell8.appendChild(suprimerButton)  
+   cell8.appendChild(suprimerButton)  
   }
   
 }
@@ -120,16 +120,16 @@ function modifier(buttonReference) {
     // }
 
 }
-// function suprimer(buttonReference) {
-//     if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
-//         var row = buttonReference.parentElement.parentElement;
-//         var rowId = row.cells[0].innerHTML
+function suprimer(buttonReference) {
+    if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
+        var row = buttonReference.parentElement.parentElement;
+        var rowId = row.cells[0].innerHTML
 
-//         document.getElementById("worksTable").deleteRow(row.rowIndex)
+        document.getElementById("worksTable").deleteRow(row.rowIndex)
         
-//         gestionOuvrage.suprimerOuvrage(rowId)
-//         resetForm()
-//     }
+        gestionOuvrage.suprimerOuvrage(rowId)
+        resetForm()
+    }
 // }
 // function printData()
 // {
@@ -138,4 +138,4 @@ function modifier(buttonReference) {
 //    newWin.document.write(divToPrint.outerHTML);
 //    newWin.print();
 //    newWin.close();
-// }
+}
