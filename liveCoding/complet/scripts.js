@@ -13,11 +13,11 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
     if (selectRow == null) {
         gestionOuvrage.addOuvrage(ouvrage);
     }
-    else
-    if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
-        ouvrage.id = rowId;
-        gestionOuvrage.modifierOuvrage(ouvrage)
-    }
+    // else
+    // if (confirm("Êtes-vous sûr de modifier cette œuvre?")){
+    //     ouvrage.id = rowId;
+    //     gestionOuvrage.modifierOuvrage(ouvrage)
+    // }
 
     insertNewRow();
 
@@ -119,17 +119,17 @@ function modifier(buttonReference) {
     //     }
     // }
 
-}
-function suprimer(buttonReference) {
-    if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
-        var row = buttonReference.parentElement.parentElement;
-        var rowId = row.cells[0].innerHTML
+// }
+// function suprimer(buttonReference) {
+//     if (confirm("Êtes-vous sûr de supprimer cette œuvre?")) {
+//         var row = buttonReference.parentElement.parentElement;
+//         var rowId = row.cells[0].innerHTML
 
-        document.getElementById("worksTable").deleteRow(row.rowIndex)
+//         document.getElementById("worksTable").deleteRow(row.rowIndex)
         
-        gestionOuvrage.suprimerOuvrage(rowId)
-        resetForm()
-    }
+//         gestionOuvrage.suprimerOuvrage(rowId)
+//         resetForm()
+//     }
 // }
 // function printData()
 // {
