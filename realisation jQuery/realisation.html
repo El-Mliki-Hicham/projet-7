@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
       <meta name="author" content="" />
     <title>Gestion des ouvrages</title>
     <link href="style.css" rel="stylesheet" />
@@ -53,54 +56,9 @@
                                     <label for="inputTitle" class="form-label">Titre</label>
                                     <input  required  type="text" class="form-control" id="inputTitle">
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="inputAuthor" class="form-label">Auteur</label>
-                                    <input type="text" class="form-control" id="inputAuthor">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputPrix" class="form-label">Prix</label>
-                                    <input type="number" step=any class="form-control " ; id="inputPrix">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputDate" class="form-label">Date de </label>
-                                    <input type="date" class="form-control" id="inputDate"
-                                        placeholder="Apartment, studio, or floor">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputLanguage" class="form-label">Langue</label>
-                                    <select id="inputLanguage" class="form-select">
-                                        <option value="" disabled selected>choisir...</option>
-                                        <option value="français">Français</option>
-                                        <option value="anglais">Anglais</option>
-                                        <option value="arabe">Arabe</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label for="workType" class="form-label">Type</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="workType" value="Roman"
-                                            type="radio" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                            Roman
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="workType" value="Essai"
-                                            type="radio" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                            Essai
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" name="workType" value="Bande-Dessinée"
-                                            type="radio" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                            Bande-Dessinée
-                                        </label>
-                                    </div>
-
-                                </div>
+                                
+                                
+                                
                                 <div class="col-12">
                                     <button id="submitButton" type="submit" class="btn btn-primary">ajouter</button>
                                 </div>
@@ -151,7 +109,7 @@
     </div>
     <script src="ovrage.js"></script>
     <script src="gestionOuvrage.js"></script>
-    <script src="scripts.js"></script>
+   <script src="js.js"></script>
 </body>
 
 </html>
