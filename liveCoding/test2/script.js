@@ -61,13 +61,13 @@ for (let i = 0; i < list.length; i++) {
     
 
 var newRow = tableList.insertRow(tableList.length)
-cell1=newRow.insertCell(0)
+cell1=newRow.insertCell(0);
 cell1.innerHTML =list[i].id
-cell2= newRow.insertCell(1)
+cell2= newRow.insertCell(1);
 cell2.innerHTML=list[i].name
-cell3= newRow.insertCell(2)
+cell3= newRow.insertCell(2);
 cell3.innerHTML=list[i].color
-cell4= newRow.insertCell(3)
+cell4= newRow.insertCell(3);
 cell4.innerHTML=list[i].prix
 
 cell5=newRow.insertCell(4)
