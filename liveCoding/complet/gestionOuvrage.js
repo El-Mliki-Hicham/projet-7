@@ -29,12 +29,12 @@ class GestionOuvrage{
         }
     }
   }
-//   suprimerOuvrage(id) {
-//     this.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
-//         return ouvrage.id != id
-//     })
-     // this.enregistrer()
-// }
+  suprimerOuvrage(id) {
+    this.#ouvrageList =  this.#ouvrageList.filter(function(ouvrage){
+        return ouvrage.id != id
+    })
+     this.enregistrer()
+}
 
 // enregistrer() {
 

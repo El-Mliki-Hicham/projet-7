@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
       <meta name="author" content="" />
-    <title>Gestion des ouvrages</title>
+    <title></title>
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="custume.css">
 </head>
@@ -14,7 +12,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="réalisation.html">&#128214;Gestion des ouvrages v2</a>
+        <a class="navbar-brand ps-3" href="réalisation.html">&#128214; v2</a>
         <!-- Sidebar Toggle-->
       <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button> 
@@ -40,25 +38,30 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4"> &#128218;Gestion des ouvrages</h1>
+                    <h1 class="mt-4"> Gestion Des etudiants</h1>
                     <div>
                         <button id="showFormBtn" class="btn  m-3 btn-primary-custom"> 🡻Nouveau</button>
                     </div>
                     <div class="card mb-4 d-none" id="formN">
 
                         <div class="card-header">
-                            <div>📝Formulaire</div>
+                            <div></div>
                         </div>
                         <div class="card-body" >
 
                             <form id="formSubmit" class="row g-3">
                                 <div class="col-md-12">
-                                    <label for="inputTitle" class="form-label">Titre</label>
-                                    <input  required  type="text" class="form-control" id="inputTitle">
+                                    <label for="inputTitle" class="form-label">name</label>
+                                    <input required type="text" class="form-control" id="name">
                                 </div>
-                                
-                                
-                                
+                               
+                                <div class="col-12">
+                                    <label for="inputPrix" class="form-label">prix</label>
+                                    <input type="number" step=any class="form-control " ; id="prix">
+                                </div>
+                           
+
+                                </div>
                                 <div class="col-12">
                                     <button id="submitButton" type="submit" class="btn btn-primary">ajouter</button>
                                 </div>
@@ -68,23 +71,20 @@
                     </div>
                     <div class="card mb-4">
                         <div class="card-header">
-                            📘Ouvrages 
+                            List des etudiants
                         </div>
                         <div class="card-body">
-                            <table class="table" id="worksTable">
+                            <table class="table" id="TableList">
                                 <thead>
                                     <tr>
                                         <th>id</th>
-                                        <th>Titre</th>
-                                        <th>Auteur</th>
-                                        <th>Prix</th>
-                                        <th>Date de publication</th>
-                                        <th>Langue</th>
-                                        <th>Type</th>
-                                        <th>Actions</th>
+                                        <th>etudiant</th>
+                                        <th>CIN</th>
+                                        <th>class</th>
+                                        
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody >
 
                                 </tbody>
                             </table>
@@ -93,23 +93,12 @@
                     </div>
                 </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+          
         </div>
     </div>
-    <script src="ovrage.js"></script>
-    <script src="gestionOuvrage.js"></script>
-   <script src="js.js"></script>
+    <script src="etudiants.js"></script>
+    <script src="GestionDesEtudiants.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

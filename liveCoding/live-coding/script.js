@@ -2,6 +2,7 @@ var gestionProduit = new GestionProduit
 var insertRow = null
 var rowId;
 
+
 document.getElementById("formSubmit").addEventListener("submit",function(event){
 
 event.preventDefault()
@@ -107,7 +108,6 @@ function supprime(buttonreferance){
 if (confirm("supprime")) {
     var row = buttonreferance.parentElement.parentElement;
     var rowId = row.cells[0].innerHTML
-
     document.getElementById("TableList").deleteRow(row.rowIndex)
 
     gestionProduit.suprimerProduit(rowId)

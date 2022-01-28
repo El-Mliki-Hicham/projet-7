@@ -88,17 +88,17 @@ function insertNewRow(){
 }
 }
 
-// function modifier(buttonReferance){
+function modifier(buttonReferance){
 
-//     insertRow = buttonReferance.parentElement.parentElement
-//     rowId = insertRow.cells[0].innerHTML
+    insertRow = buttonReferance.parentElement.parentElement
+    rowId = insertRow.cells[0].innerHTML
     
-//     var etudiant = new Etudiant
-// etudiant = gestionEtudiant.getItem(rowId)
-//     document.getElementById("name").value = etudiant.name 
-//     document.getElementById("cin").value = etudiant.cin 
-//     document.getElementById("class").value = etudiant.class 
+    var etudiant = new Etudiant
+etudiant = gestionEtudiant.getItem(rowId)
+    document.getElementById("name").value = etudiant.name 
+    document.getElementById("cin").value = etudiant.cin 
+    document.getElementById("class").value = etudiant.class 
     
 
 
-// }
+}
