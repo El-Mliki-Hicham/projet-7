@@ -82,14 +82,16 @@ cell2 = newRow.insertCell(1);
     cell3.innerHTML = list[i].prix
 
     cell4 = newRow.insertCell(3)
+    cell5 = newRow.insertCell(4)
 
 
-
-    $(cell4).append('<button id = "btnM">modifier</button>');        
-    $(cell4).append('<button id = "btnS">suprimer</button>');        
-
+    $(cell4).append('<button id = "btnM">modifier</button>');                   
     $(cell4).attr("onclick",'modifier(this)'); 
-    $(cell4).attr("onclick",'suprimer(this)');
+
+   
+
+    $(cell5).append('<button id = "btnS">suprimer</button>');
+    $(cell5).attr("onclick",'suprimer(this)');
 
     // var modifierButton = document.createElement("button")
     // var supprimeButton = document.createElement("button")
@@ -116,7 +118,7 @@ cell2 = newRow.insertCell(1);
 
 
 function modifier(buttonreferance){
-insertRow = buttonreferance.parentElement.parentElement
+insertRow = buttonreferance.parentElement
 rowId  = insertRow.cells[0].innerHTML
 produit= new Produit()
 produit = gestionProduit.getId( rowId)
